@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ucapan Idul Fitri 1 Syawal 1447 H/2026 M</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f8f5e6;
+            color: #1a1a1a;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Bagian Awal Masuk */
+        .awal {
+            background: white;
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 5rem auto;
+        }
+        .awal h1 {
+            color: #084c61;
+            margin-bottom: 2rem;
+        }
+        .btn-masuk {
+            background: #084c61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        /* Bagian Taqoballahu */
+        .bagian-taqoballahu {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        .highlight {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #084c61;
+            margin: 1.5rem 0;
+        }
+        .btn-perkataan {
+            background: #084c61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        /* Bagian Perkataan Maaf */
+        .bagian-maaf {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        .paragraf-maaf {
+            margin: 1.5rem 0;
+            line-height: 1.8;
+            display: none;
+        }
+        .paragraf-maaf.active {
+            display: block;
+            animation: fadeIn 1s ease;
+        }
+        .btn-lanjut {
+            background: #084c61;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 0.5rem;
+        }
+
+        /* Bagian Konfirmasi Pemaafan */
+        .bagian-konfirmasi {
+            display: none;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        .btn-pilihan {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .btn-tidak {
+            background: #e74c3c;
+            color: white;
+            transition: all 1s ease;
+        }
+        .btn-iya {
+            background: #27ae60;
+            color: white;
+        }
+        .terima-kasih {
+            display: none;
+            margin-top: 2rem;
+            color: #084c61;
+            font-weight: bold;
+            animation: fadeIn 1s ease;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            background: #084c61;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 2rem auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bagian Awal - Tombol Masuk -->
+    <div class="awal" id="bagianAwal">
+        <h1>SELAMAT HARI RAYA IDUL FITRI</h1>
+        <p>1 Syawal 1447 H / 2026 M</p>
+        <button class="btn-masuk" onclick="masukWebsite()">MASUK</button>
+    </div>
+
+    <!-- Bagian Taqoballahu -->
+    <div class="bagian-taqoballahu" id="bagianTaqoballahu">
+        <p>Assalamualaikum warahmatullahi wa barakatuh</p>
+        <p class="highlight">TAQOBALLAHU MINNA WA MINKUM</p>
+        <p>Dengan memohon rahmat dan ridho Allah SWT,</p>
+        <button class="btn-perkataan" onclick="kePerkataanMaaf()">PERKATAAN MAAF</button>
+    </div>
+
+    <!-- Bagian Perkataan Maaf (Per Paragraf) -->
+    <div class="bagian-maaf" id="bagianMaaf">
+        <h3>Perkataan Maaf</h3>
+        
+        <div class="paragraf-maaf active" id="paragraf1">
+            <p>Kami sekeluarga mengucapkan selamat menyambut Hari Raya Idul Fitri.</p>
+        </div>
+        
+        <div class="paragraf-maaf" id="paragraf2">
+            <p>Kami mengucapkan mohon maaf lahir dan batin atas segala kesalahan serta kekhilafan yang telah kami perbuat.</p>
+        </div>
+        
+        <div class="paragraf-maaf" id="paragraf3">
+            <p>Maaf jika ada ucapan yang kurang pantas atau menyakitkan hati, baik yang disengaja maupun tidak disengaja.</p>
+        </div>
+        
+        <div class="paragraf-maaf" id="paragraf4">
+            <p>Maaf juga jika ada perbuatan atau sikap kami yang kurang baik selama periode Ramadhan maupun sehari-hari.</p>
+        </div>
+        
+        <div class="paragraf-maaf" id="paragraf5">
+            <p>Semoga amal ibadah kita semua diterima oleh Allah SWT. Aamiin ya rabbal alamin</p>
+        </div>
+
+        <button class="btn-lanjut" onclick="lanjutParagraf(1)">LANJUT</button>
+        <button class="btn-lanjut" style="display: none;" id="btnSelesai" onclick="keKonfirmasi()">SELESAI</button>
+    </div>
+
+    <!-- Bagian Konfirmasi Pemaafan -->
+    <div class="bagian-konfirmasi" id="bagianKonfirmasi">
+        <h3>Apakah kamu memaafkan saya?</h3>
+        <button class="btn-pilihan btn-tidak" id="btnTidak">TIDAK</button>
+        <button class="btn-pilihan btn-iya" id="btnIya">IYA</button>
+        
+        <div class="terima-kasih" id="terimaKasih">
+            <p>✨ TERIMA KASIH BANYAK! ✨</p>
+            <p>Semoga Allah SWT memberikan kebaikan kepada kita semua,</p>
+            <p>dan tali silaturahmi kita tetap terjaga dengan baik.</p>
+            <p>Wassalamualaikum warahmatullahi wa barakatuh</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Al Multazzam Sekeluarga</p>
+        <p>© 20-21 maret 2026 - Semoga Kita Selalu dalam Lindungan Allah SWT</p>
+    </footer>
+
+    <script>
+        // Variabel untuk melacak paragraf
+        let paragrafAktif = 1;
+        const totalParagraf = 5;
+
+        // Pindah dari bagian awal ke taqoballahu
+        function masukWebsite() {
+            document.getElementById('bagianAwal').style.display = 'none';
+            document.getElementById('bagianTaqoballahu').style.display = 'block';
+        }
+
+        // Pindah ke bagian perkataan maaf
+        function kePerkataanMaaf() {
+            document.getElementById('bagianTaqoballahu').style.display = 'none';
+            document.getElementById('bagianMaaf').style.display = 'block';
+        }
+
+        // Lanjutkan paragraf berikutnya
+        function lanjutParagraf(noParagraf) {
+            paragrafAktif++;
+            if (paragrafAktif <= totalParagraf) {
+                document.getElementById(`paragraf${paragrafAktif}`).classList.add('active');
+                
+                // Jika sudah sampai paragraf terakhir, ganti tombol jadi selesai
+                if (paragrafAktif == totalParagraf) {
+                    document.querySelector('.btn-lanjut').style.display = 'none';
+                    document.getElementById('btnSelesai').style.display = 'inline-block';
+                }
+            }
+        }
+
+        // Pindah ke bagian konfirmasi
+        function keKonfirmasi() {
+            document.getElementById('bagianMaaf').style.display = 'none';
+            document.getElementById('bagianKonfirmasi').style.display = 'block';
+        }
+
+        // Aksi jika tombol TIDAK ditekan
+        document.getElementById('btnTidak').addEventListener('click', function() {
+            this.style.transform = 'scale(0)';
+            this.style.opacity = '0';
+            setTimeout(() => this.style.display = 'none', 1000);
+        });
+
+        // Aksi jika tombol IYA ditekan
+        document.getElementById('btnIya').addEventListener('click', function() {
+            document.getElementById('btnTidak').style.display = 'none';
+            this.style.display = 'none';
+            document.getElementById('terimaKasih').style.display = 'block';
+            document.getElementById('footer').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
